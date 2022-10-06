@@ -30,3 +30,9 @@
     margin-right: 30px;
     margin-bottom: 20px;
 }
+.hide {
+    display: none;
+}
+.remove {
+    display: none;
+}
