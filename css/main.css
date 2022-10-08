@@ -1,27 +1,34 @@
-.descripccion {
+
+  header, .alert{
+    z-index: 100;
+  }
+  .estilosH1 {
+    color: white;
+  }
+  .description{
     height: 25px;
     overflow: hidden;
     transition: height .3s ease-in .3s;
-}
-.descripccion:hover {
+  }
+  .description:hover{
     height: 80px;
-}
-.carrito {
+  }
+  .carrito{
     min-height: 80vh;
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
-}
-.tablaProductos {
+  }
+  .table__productos{
     display: flex;
-}
-.tablaProductos > img {
+  }
+  .table__productos > img{
     width: 9rem;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 6px;
     margin-right: 20px;
-}
-.tablaCantidad > input {
+  }
+  .table__cantidad > input{
     width: 40px;
     border: none;
     outline: 0;
@@ -29,10 +36,7 @@
     font-weight: 700;
     margin-right: 30px;
     margin-bottom: 20px;
-}
-.hide {
+  }
+  .hide, .remove{
     display: none;
-}
-.remove {
-    display: none;
-}
+  }

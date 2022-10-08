@@ -1,186 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- boots-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Mento</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Mento Auto servico</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Carrito</a>
-              </li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#bla"  />
+    <title>Mento resto</title>
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="container-fluid bg-dark position-sticky top-0">
+      
+      <ul
+        class="nav nav-pills mb-3 py-3 container"
+        id="pills-tab"
+        role="tablist"
+      >
+      <h1 class="estilosH1">Mento resto</h1>
+        
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+            >Productos</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+            >Carrito</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+    Producto Añadido al carrito!
+    </div>
+    <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+      Producto removido!
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade "
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+      >
+        1
+      </div>
+      <div
+        class="tab-pane fade show active container"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+      >
+        <h2 class="h4 m-4 ">Productos</h2>
+
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Simple con cheddar</h5>
+              <img src="img/pexels-engin-akyurt-2282532.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Simple con lechuga</h5>
+              <img src="img/pexels-horizon-content-3738730.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Simple con ketchup</h5>
+              <img src="img/pexels-mali-maeder-103886.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Simple con panceta</h5>
+              <img src="img/pexels-tioroshi-lazaro-2874981.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Simple con huevo</h5>
+              <img src="img/pexels-valeria-boltneva-1251198.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Simple con lechuga y tomate</h5>
+              <img src="img/pexels-valeria-boltneva-1639557.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Coca-cola</h5>
+              <img src="img/coca.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 3</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Pepsi</h5>
+              <img src="img/pepsi.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 3</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
-    </nav>
-    <main class="container-fluid">
-        <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
-          Producto Añadido al carrito!
-        </div>
+      </div>
+      <div
+        class="tab-pane fade carrito"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+      <br>
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          
         
-        <div>
-            <h2 class="m-4 text-primaty">Productos</h2>
-            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/pexels-engin-akyurt-2282532.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/pexels-horizon-content-3738730.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/pexels-mali-maeder-103886.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/pexels-tioroshi-lazaro-2874981.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/pexels-valeria-boltneva-1251198.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/pexels-valeria-boltneva-1639557.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/coca.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center mb-4">
-                    <div class="card shadow mb-1 rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center">Card title</h5>
-                        <img src="img/pepsi.jpg" class="card-img-top" alt="...">
-                        <div class="card-body ">
-                          <p class="card-text descripccion">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h5>Precio: <span class="precio">$ 5</span></h5>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary button">Añadir al carrito</button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
+          
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal ">Total: 0</h3>
         </div>
-        <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
-          Producto removido!
+        <div class="col d-flex justify-content-end">
+          <button class="btn btn-success">Comprar</button>
         </div>
-        <br>
-        <div class="carrito">
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">productos</th>
-                    <th scope="col">precio</th>
-                    <th scope="col">cantidad</th>
-                  </tr>
-                </thead>
-                <tbody class="tbody">
-                  
-                </tbody>
-            </table>
-            <br><br>
-            <div class="row mx-4">
-                <div class="col">
-                    <h3 class="itemCardTotal"> Total: 0</h3>
-                </div>
-                <div class="col d-flex justify-content-end">
-                    <button class="btn btn-success">Comprar</button>
-                </div>
-            </div>
-        </div>
-        
-
-    </main>
-
-
-
-
-
-
+      </div>
+      
+      </div>
+    </div>
+    <!-- js boots -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/app.js"></script>
-    <!-- JavaScript boots -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
