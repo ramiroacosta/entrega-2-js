@@ -40,3 +40,10 @@
   .hide, .remove{
     display: none;
   }
+  .nav-item {
+    height: fit-content;
+    margin-left: 15px;
+  }
+  .navSize {
+    align-items: center;
+  }
