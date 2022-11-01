@@ -1,4 +1,5 @@
 const Clickbutton = document.querySelectorAll('.button')
+const clickComprar = document.querySelectorAll('.btnComprar')
 const tbody = document.querySelector('.tbody')
 let carrito = []
 
@@ -27,12 +28,7 @@ function agregarCarrito(e){
 
 function agregarItemCarrito(nuevoItem){
 
-  const alert = document.querySelector('.alert')
-
-  setTimeout( function(){
-    alert.classList.add('hide')
-  }, 2000)
-    alert.classList.remove('hide')
+  const alert = swal (" ¡Producto agregado! " , " ¡Tu carrito fue cargado! " , "success");
 
   const InputElemnto = tbody.getElementsByClassName('input__elemento')
   for(let i =0; i < carrito.length ; i++){
@@ -49,7 +45,27 @@ function agregarItemCarrito(nuevoItem){
   
   renderCarrito()
 } 
-
+clickComprar.forEach(btnComprar => {
+  btnComprar.addEventListener('click', Comprar)
+})
+function Comprar (e){
+  const alerta = swal({
+    title: "Estas seguro de comprar?",
+    text: "Si confirmas no hay vuelta atras!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("Genial! Estamos preparando tu pedido!", {
+        icon: "success",
+      });
+    } else {
+      swal("Tu pedido fue cancelado!");
+    }
+  });
+}
 
 function renderCarrito(){
   tbody.innerHTML = ''
@@ -102,63 +118,11 @@ function removeItemCarrito(e){
     }
   }
 
-  const alert = document.querySelector('.remove')
-
-  setTimeout( function(){
-    alert.classList.add('remove')
-  }, 2000)
-    alert.classList.remove('remove')
+  const alert = swal (" ¡Producto eliminado! ", "Eliminado" , "error");
 
   tr.remove()
   CarritoTotal()
 }
-function DeleteComprar (){
-  tbody.innerHTML = ''
-  carrito.map(item => {
-  const div = document.createElement('tr')
-  div.classList.add('ItemCarrito')
-  const Content = `
-    
-    <th scope="row">1</th>
-            <td class="table__productos">
-              <img src=${item.img}  alt="">
-              <h6 class="title">${item.title}</h6>
-            </td>
-            <td class="table__price"><p>${item.precio}</p></td>
-            <td class="table__cantidad">
-              <input type="number" min="1" value=${item.cantidad} class="input__elemento">
-              <button class="delete btn btn-danger">x</button>
-            </td>
-    
-    `
-    div.innerHTML = Content;
-    tbody.append(div)
-    div.querySelector(".delete").addEventListener('click', removeComprar)
-  })
-  CarritoTotal()
-}
-function removeComprar(e){
-  const buttonDelete = e.target
-  const div = buttonDelete.closest(".ItemCarrito")
-  const title = div.querySelector('.title').textContent;
-  for(let i=0; i<carrito.length ; i++){
-
-    if(carrito[i].title.trim() === title.trim()){
-      carrito.splice(i, 1)
-    }
-  }
-
-  const alert = swal ( "¡Compra realizada!" , "¡Ya estamos armando tu pedido!" , "Éxito" )   ;
-
-  setTimeout( function(){
-    alert.classList.add('remove')
-  }, 2000)
-    alert.classList.remove('remove')
-
-  div.remove()
-  CarritoTotal()
-}
-
 
 function sumaCantidad(e){
   const sumaInput  = e.target
