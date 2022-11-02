@@ -47,3 +47,9 @@
   .navSize {
     align-items: center;
   }
+
+  @media screen and (max-width: 420px){
+    .table__productos > img{
+      width: 5rem;
+    }
+  }

@@ -62,7 +62,10 @@ function Comprar (e){
         icon: "success",
       });
     } else {
-      swal("Tu pedido fue cancelado!");
+      swal("Tu pedido fue cancelado!",{
+        icon:"error",
+      });
+      
     }
   });
 }
@@ -136,7 +139,6 @@ function sumaCantidad(e){
     }
   })
 }
-
 // localstorage
 
 function agregarLocalstorage(){
